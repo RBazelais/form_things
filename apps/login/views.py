@@ -5,6 +5,7 @@ from .models import User
 def index(request):
     return render(request, "login/index.html", {'status':True})
 
+
 def processReg(request):
     confirm = request.POST['confirm']
     response = User.objects.validate(request.POST)
