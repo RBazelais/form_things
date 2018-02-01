@@ -1,9 +1,10 @@
-from django.conf.urls import url, include
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^processReg$', views.processReg, name="processReg"),
-    url(r'^processLog/$', views.processLog, name="processLog"),
-    url(r'^$', views.index, name="index"),
-    url(r'^logout$', views.logout)
+	url(r'^$', views.index),
+	url(r'^process$', views.process),
+	url(r'^login$', views.login),
+	url(r'^logout$', views.logout),
+	url(r'^users/(?P<id>\d+)$', views.user_dash)
 ]

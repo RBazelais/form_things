@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%  block content %}
+
+<main>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+            <a href="#/Plans">Home</a>
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+                <a href="/logout">Logout</a>
+            </button>
+        </nav> 
+        <br><br>
+        <h4>Welcome, {{user.name}}</h4>
+        <br>
+        <h5>User Info</h5>
+        <p>Name: {{user.name}}</p>
+        <p>Email: {{user.email}}</p>
+        <a href="/dashboard/">Continue to Dashboard</a>
+        
+    </div>	
+</main>
+
+{% endblock %}
