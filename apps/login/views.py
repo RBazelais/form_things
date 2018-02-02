@@ -54,4 +54,4 @@ def user_dash(request, id):
 		return redirect('/')
 	else:	
 		user = User.objects.get(id=id)
-		return render(request, "display.html", {'user' : user})		
+		return render(request, "userview.html", {'user' : user})		

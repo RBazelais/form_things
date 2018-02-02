@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%  block content %}
+
+<main>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+                <a href="/users/dashboard">Dashboard</a>
+            </button>
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+                <a href="/logout">Logout</a>
+            </button>
+        </nav> 
+        <br><br>
+        <h4>Posts by {{user.name}}</h4>
+        <h4>count {{count_posts.count}}</h4>
+        <br><br>
+        <ul>
+            {% for quote in all_quotes %}
+                <li>{{quote.quote_author}} {{quote.message}}</li>
+            {% endfor %}
+        </ul>
+    </div>	
+</main>
+
+{% endblock %}
